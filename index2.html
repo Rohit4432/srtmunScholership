@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarship Sub-Departments</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.pinimg.com/736x/5d/5d/4d/5d5d4d08e4946c30d2b7cb5fbb99933a.jpg"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="el.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <span class="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/6/6d/SRTMUN_Logo_Official_Color_-PNG.png"
+            alt="SRTMUN Logo"
+          />
+        </span>
+        <span class="header-content">
+          <h1>SWAMI RAMANAND TEERTH MARATHWADA UNIVERSITY, NANDED</h1>
+          <h3>
+            Established on 17th September 1994, Recognized By the UGC U/s 2(f)
+            and 12(B)
+          </h3>
+          <h3>NAAC Re-accredited 'B++' grade with CGPA 2.96</h3>
+        </span>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <div class="logo1">Scholarship Department</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a
+            href="https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/FindEligibleSchemes"
+            >Eligibility</a
+          >
+        </li>
+      </ul>
+      <div class="menu-toggle">☰</div>
+    </nav>
+
+    <div class="container">
+      <img
+        src="https://gallerypngs.com/wp-content/uploads/2024/05/mahatma-jyotiba-phule-png-image-588x750.png"
+        style="filter: grayscale(100%)"
+        alt="Mahatma Jotiba Phule"
+      />
+      <img
+        src="https://sarthi-maharashtragov.in/user/pages/images/backgrounds/shahumaharaj-image.webp"
+        alt="Rajshri Shahu Maraj Photo"
+      />
+      <img
+        src="https://gallerypngs.com/wp-content/uploads/2024/04/colourful-Bhimrao-Ramji-Ambedkar-png.png"
+        style="filter: grayscale(100%)"
+        alt="Dr B R Ambedkar"
+      />
+    </div>
+    <div class="container1">
+      <h2>🎓 Find Eligible Scholarship Schemes</h2>
+      <form id="scholarshipForm">
+        <label for="department">Department:</label>
+        <select id="department" required onchange="updateDepartmentOptions()">
+          <option value="">--Select--</option>
+        </select>
+
+        <label for="caste">Caste Category:</label>
+        <select id="caste" required onchange="updateDropdowns()">
+          <option value="">--Select--</option>
+        </select>
+
+        <label for="courseType">Course Type:</label>
+        <select id="courseType" required onchange="updateCourseOptions()">
+          <option value="">--Select Department First--</option>
+        </select>
+
+        <label for="courseName">Course Name:</label>
+        <select id="courseName" required onchange="updateIncomeOptions()">
+          <option value="">--Select Course Type First--</option>
+        </select>
+
+        <label for="disability">Disability (Yes or No):</label>
+        <select id="disability" required onchange="updateIncomeOptions()">
+          <option value="">--Select--</option>
+          <option value="YES">YES</option>
+          <option value="NO">NO</option>
+        </select>
+
+        <label for="income">Family Income:</label>
+        <select id="income" required>
+          <option value="">--Select other options first--</option>
+        </select>
+
+        <button type="button" onclick="submitForm()">
+          🔍 Check Eligibility
+        </button>
+      </form>
+
+      <p id="successMessage"></p>
+
+      <table id="schemeTable">
+        <thead>
+          <tr>
+            <th>Government Department</th>
+            <th>Scholarship Scheme</th>
+            <th>Required Documents</th>
+            <th>Apply Link</th>
+          </tr>
+        </thead>
+        <tbody id="schemeBody"></tbody>
+      </table>
+
+      <p class="disclaimer">
+        This is for your kind information and may not be 100% accurate. For more
+        information, contact the Scholarship department.
+      </p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Scholarship Department, SRTMUN. All rights reserved.</p>
+      <p>Developed and Maintained by Shivkumar Nevhal and Rohit Paikrao</p>
+    </div>
+    <script src="el.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
